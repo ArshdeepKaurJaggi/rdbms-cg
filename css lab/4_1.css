@@ -1,0 +1,12 @@
+h1{
+    color:#000000;
+    background-color:rgb(255, 99, 71);
+}
+p{
+    color: rgb(255, 255, 255);
+    background-color:hsla(9, 80%, 15%, 0.5);
+}
+div{
+    color: hsl(39, 100%, 50%);
+    background-color:rgba(255, 99, 71, 0.5);
+}

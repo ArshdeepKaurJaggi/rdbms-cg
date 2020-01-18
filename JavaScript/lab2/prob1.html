@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <p></p>
+
+        <script>
+            window.onload =  loop = () => {
+                for (var i = 0; i<100;i++){
+                    document.getElementsByTagName('p')[0].innerHTML += i + ' ';
+                    if((i + 1) % 10 == 0 && i != 0){
+                        document.getElementsByTagName('p')[0].innerHTML += '<br/>';
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

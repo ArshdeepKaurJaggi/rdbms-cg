@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title> window example </title>
+        <style>
+            table{
+                text-align: center;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body >
+        <form id="frmlab">
+            <table border="1" cellspacing="8" cellpadding="10" bordercolor="blue">
+                <tr>
+                    <td colspan="4">Create a new window</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        Window size
+                    </td>
+                </tr>
+                <tr>
+                    <td>Width</td>
+                    <td><input type="number" id='width'></td>
+                    <td>Height</td>
+                    <td><input type="number" id='height'></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        Position
+                    </td>
+                </tr>
+                <tr>
+                    <td>Left</td>
+                    <td><input type="number" id='left'></td>
+                    <td>Right</td>
+                    <td><input type="number" id='right'></td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="2"><input type="button" id='width' value="New Window" onclick="nwindow()"></td>
+                    
+                    <td colspan="2"><input type="button" id='height' value="Reset" onclick="reset()"></td>
+                </tr>
+
+            </table>
+        </form>
+
+
+
+        <script>
+            nwindow = () => {
+                var width = document.getElementsByTagName('input')[0].value
+                var height = document.getElementsByTagName('input')[1].value
+                var left = document.getElementsByTagName('input')[2].value
+                var right = document.getElementsByTagName('input')[3].value
+
+                newWin = window.open('','',"width=200, height=699");
+                newWin.resizeTo(width,height);
+
+            }
+
+            reset = () => {
+                document.getElementsByTagName('form')[0].reset();
+            }
+        </script>
+    </body>
+</html>

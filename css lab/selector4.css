@@ -1,0 +1,16 @@
+a:link{
+    text-decoration: none;
+color: grey;
+}
+
+a:visited{
+      text-decoration: none;
+color: gray;
+}
+
+a:hover{
+     text-decoration: underline;
+color: green;
+font-weight: bolder;
+	letter-spacing: 2px;
+}

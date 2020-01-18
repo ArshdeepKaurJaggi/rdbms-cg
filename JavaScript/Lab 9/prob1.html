@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Regex
+        </title>
+    </head>
+    <body>
+        
+            Regex : 
+            <input type="text" id="reg">
+
+       
+        <br/>
+        
+            Subject String : 
+            <input type="text" id="string">
+        
+        <br/>
+        
+            <input type="button" value="Test Match"  onclick="test()">
+            <input type="button" value="Show Match" onclick="disp()">
+
+        
+
+
+        <script>
+            
+            
+
+
+
+            // console.log(globalString)
+            test = () => {
+                // globalReg = 
+                // globalString = 
+                var globalReg = document.getElementsByTagName('input')[0].value;
+                var globalString = document.getElementsByTagName('input')[1].value;
+                globalString.match(globalReg) ? alert('succesfull match') : alert("didn't match lol ");
+               
+
+
+                
+            }
+
+            disp = () => {
+                var globalReg = document.getElementsByTagName('input')[0].value;
+                var globalString = document.getElementsByTagName('input')[1].value;
+                ( globalString.search(globalReg) >= 0) ?  alert(`match at position ${globalString.search(globalReg)} `) : alert(`It did not match`);
+            }
+
+        </script>
+    </body>
+</html>

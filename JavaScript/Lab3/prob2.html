@@ -1,0 +1,24 @@
+<html<html>
+    <body>
+
+        <p>The actual string is : Capgemini</p>
+        <p>The letter search 
+            <input type="text" onkeyup="find()">
+        </p>
+        <p >Found at : <span></span></p>
+
+        <script>
+            find = () => {
+                var word = 'Capgemini';
+                var letter = document.getElementsByTagName('input')[0].value;
+                var x =  word.indexOf(letter)
+                console.log(x);
+                (x >=0) ? document.getElementsByTagName('span')[0].innerHTML = x : document.getElementsByTagName('span')[0].innerHTML = 'DNE';
+
+            }
+          
+        </script>
+
+
+    </body>
+</html>

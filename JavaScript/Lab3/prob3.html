@@ -1,0 +1,32 @@
+<html<html>
+    <body>
+
+        <p>The actual string is : University of Capgemini</p>
+        <p>The letter search 
+            <input type="text" onkeyup="find()">
+        </p>
+        <p >Found at : <span></span></p>
+        <p> Substr(3,6) : </p>
+
+        <p>hello everyone</p>
+
+        <script>
+            find = () => {
+                var small = 'hello everyone';
+                var word = 'University of Capgemini';
+                var letter = document.getElementsByTagName('input')[0].value;
+                var x =  word.indexOf(letter)
+
+                (x >=0) ? document.getElementsByTagName('span')[0].innerHTML = x : document.getElementsByTagName('span')[0].innerHTML = 'DNE';
+
+                document.getElementsByTagName('p')[3].innerHTML += word.substr(3,6);
+                document.getElementsByTagName('p')[4].innerHTML += "<br/>  Uppercase : "+small.toUpperCase();
+       
+
+            }
+          
+        </script>
+
+
+    </body>
+</html>

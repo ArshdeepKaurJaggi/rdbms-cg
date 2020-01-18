@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table{
+                width: 600px;
+                
+            }
+            table,td,th{
+                border : 1px solid white;
+            }
+            body{
+                background-color: turquoise;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>
+            Products
+        </h2>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>Barbie</td>
+                <td>Beautiful</td>
+                <td>20</td>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>Senior Analyst</td>
+                <td>sfdc</td>
+                <td>0.20</td>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>Charger</td>
+                <td>Battery</td>
+                <td>270</td>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>DVD</td>
+                <td>Good sound</td>
+                <td>70</td>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="order()">Order</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            console.log('gg');
+            
+           
+            order = () => {
+                var flag = false
+                for(var i = 0; i< 3 && flag == false;i++){
+                    
+                    if(document.getElementsByTagName('input')[i].value != 0){ 
+                        flag = true;
+                        var filled = i
+                        var product = document.getElementsByTagName('tr')[i+1].cells[0].innerText;
+                        var desc= document.getElementsByTagName('tr')[i+1].cells[1].innerText;
+                        var price = document.getElementsByTagName('tr')[i+1].cells[2].innerText;
+                        var quantity = document.getElementsByTagName('input')[i].value
+                        
+                        console.log(product)
+                        break
+                    }
+                    if(!flag && i == 3) alert('Please fill something');
+                }
+
+                if(flag){
+                    invoice = window.open('invoice','','width:500,height:400');
+                    code = `<html>
+                            <body>
+                                <table>
+                                    <tr>
+                                        <td>${product}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>${desc}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>${price}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>${quantity}</td>
+                                    </tr>
+                                </table>
+                            </body>
+                        </html>`
+    
+                    invoice.document.write(code);
+                    invoice.focus();
+                }
+                else{
+                    alert('Select something')
+                }
+                // <html><body><table><tr><td>${product}</td></tr><tr><td>${desc}</td></tr><tr> <td>${price}</td></tr><tr>    <td>${quantity}</td></tr> </table>       </body>    </html>
+                    
+            }
+        </script>
+    </body>
+</html>

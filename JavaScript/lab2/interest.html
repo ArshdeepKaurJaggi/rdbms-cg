@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <p>
+            Principal
+            <input type="number"></p><br/>
+            Rate
+            <input type="number"></p><br/>
+            Period in years
+            <input type="number"></p><br/>
+            <button type="button" onclick="interest()">Total sum</button> 
+            <span></span>
+        </p>
+
+        <script>
+             interest = () => {
+                var p = document.getElementsByTagName('input')[0].value;
+                var n = document.getElementsByTagName('input')[1].value;
+                var r = document.getElementsByTagName('input')[2].value;
+                var sum = p * n * r
+
+                document.getElementsByTagName('span')[0].innerHTML += sum/100;
+            }
+        </script>
+    </body>
+</html>

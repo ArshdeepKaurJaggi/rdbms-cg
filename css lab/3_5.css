@@ -1,0 +1,61 @@
+#idh1{
+    text-decoration: underline;
+    font-size: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#iddiv1
+{
+    text-align: center;
+    text-shadow: 3px 3px red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+}
+#iddiv2
+{
+    text-align: end;
+    text-shadow: 5px 3px yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 80px;
+}
+#iddiv3
+{
+    text-align: center;
+    text-shadow: 3px 3px green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+#idp1
+{
+    text-align: start;
+    text-shadow: 3px 3px brown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+#idp2
+{
+    text-align: end;
+    text-shadow: -5px -5px forestgreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 90px;
+}
+#idp3
+{
+    text-align: center;
+    text-shadow: -3px -3px royalblue;
+    font-family: fantasy;
+    font-size: 30px;
+}
+#idp4
+{
+    text-align: center;
+    text-shadow: 3px 3px green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+#idp5
+{
+    text-align: center;
+    text-shadow: 3px 3px green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>
+            Location Properties
+        </h2>
+        <p>href : </p>
+        <p>pathname : </p>
+        <p>file : </p>
+
+        <script>
+            document.getElementsByTagName('p')[0].innerHTML += window.location.href
+            document.getElementsByTagName('p')[1].innerHTML += window.location.pathname
+            document.getElementsByTagName('p')[2].innerHTML += window.location.protocol
+        </script>
+    </body>
+</html>

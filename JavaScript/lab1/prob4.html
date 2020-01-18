@@ -1,0 +1,35 @@
+<html>
+<head><title>Embedding Script tag in HTML Document</title>
+
+<script>
+
+//TODO:use write method in document object to display the desired output 
+
+</script>
+<hr>
+<script src="dispHello.js">
+</script>
+
+</head>
+<body>
+
+<p id='disp'>The script is in dispHello.js  <br/></p>
+
+<p id="internal"></p>
+
+<hr>
+
+<p><code>The actual script is in external script file called "helloWorld.js"</code></p>
+
+<script>
+//TODO:  Insert your code here to call the function dispHello() from the Hello.js file
+window.onload = document.getElementById('disp').innerHTML += dispHello();
+
+document.getElementById('internal').innerHTML = 'This is from internal sscript';
+
+</script>
+
+<hr>
+
+</body>
+</html>

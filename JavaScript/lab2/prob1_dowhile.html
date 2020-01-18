@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p></p>
+
+        <script>
+            window.onload =  loop = () => {
+                var i = 0;
+                do {
+                    document.getElementsByTagName('p')[0].innerHTML += i + ' ';
+                    if((i + 1) % 10 == 0 && i != 0){
+                        document.getElementsByTagName('p')[0].innerHTML += '<br/>';
+                    }
+                    i = i + 1;
+                } while (i < 100); 
+                
+            }
+        </script>
+    </body>
+</html>

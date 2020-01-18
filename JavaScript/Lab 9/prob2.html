@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+    <body>
+
+        <div class="container">
+        <h2>Form</h2>
+        <form>
+            <div class="form-group">
+            <label for="name">Name :</label>
+            <input type="text" class="form-control" minlength="3" maxlength="10" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">DOB:</label>
+                <input type="date" class="form-control"  id="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Phone number :</label>
+                <input type="tel" class="form-control" minlength="3" maxlength="10" id="tel" required>
+            </div>
+            <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" minlength="3" maxlength="40" id="" required>
+            </div>
+            <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-default" onclick="preview()">Preview</button>
+        </form>
+        </div>
+        
+
+
+    <script>
+        preview = () => {
+            var details = []
+            for(var i = 0; i < 4; i++){
+                details.push(document.getElementsByTagName('input')[i].value);
+            }
+            newWindow = window.open('','','width:500,height:500');
+            code = `<div>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>`
+            newWindow.document.write(code)
+            
+            for(var i = 0; i < 4; i++){
+                newWindow.document.getElementsByTagName('p')[i].innerHTML = details[i];
+            }
+        }
+    </script>
+
+    </body>
+</html>

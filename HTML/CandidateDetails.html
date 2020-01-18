@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Employee Details 
+        </title>
+        <style>
+            .heading {
+                text-decoration: underline;
+                text-align: center;
+            }
+            table,tr,td{
+                width: 700px;
+                text-align: center;
+                font-weight: bold;
+                border: 2px solid black;
+                background-color: cyan;
+            }
+            .none{
+                color: black;
+                text-align: left;
+                width: 400px;
+            }
+            td{
+                text-align: left;
+            }
+            tr td:first-child::after {
+                content:" *";
+                color: red;
+            }
+            tr:last-child td:first-child::after{
+                content: '';
+                color : white;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form id="form">
+            <table>
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        <input type="text" maxlength="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password
+                    </td>
+                    <td>
+                        <input type="password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone Number
+                    </td>
+                    <td>
+                        <input type="number" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name='gender' value="Male" required> Male
+                        <input type="radio" name='gender' value="Female" required> Female    
+                    </td>
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td>
+                        <input type="date" required>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        Email 
+                    </td>
+                    <td>
+                        <input type="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Highest Qualification</td>
+                    <td>
+                        <select>
+
+                            <option value="null" selected>Highest</option>
+                            <option value="college">College</option>
+                            <option value="x">X</option>
+                            <option value="xii">XII</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Courses Intereseted in</td>    
+                    <td>
+                        <input type="checkbox" value="HTML"> HTML 
+                        <input type="checkbox" value="Java"> Java
+                        <input type="checkbox" value=".net"> .NET
+                        <input type="checkbox" value="Client/Server"> Client/Server
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        Training needed to be Attended
+                    </td>
+                    <td>
+                        <select>
+                            <option value="js" selected>JavaScript</option>
+                            <option value="react">React</option>
+                            <option value="nodejs">NodeJS</option>
+                            <option value="firebase">Firebase</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Comments
+                    </td>
+                    <td>
+                        <textarea rows="8"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Upload degree 
+                    </td>
+                    <td>
+                        <input type="file">    
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit">
+                        <button type="reset">Reset</button>  
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <script>
+            document.getElementById("form").addEventListener("submit", function(event){
+                event.preventDefault();
+                
+            });
+
+
+            reset = () =>{
+                document.getElementById('form').reset();
+            }
+        </script>
+    </body>
+</html>
