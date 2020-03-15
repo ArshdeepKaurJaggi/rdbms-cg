@@ -1,0 +1,44 @@
+<template>
+    <div class="slds-p-around_small">
+        <fieldset class="slds-box slds-theme--default slds-container--small">
+            <legend id="form" class="slds-text-heading--small 
+                slds-p-vertical--medium">CAB FORM</legend>
+                <lightning-record-edit-form
+                object-api-name="olacabpractice__c" id="createAccountForm">
+                <lightning-input-field field-name="CustomerName__c" value={namefield} onchange={updatename}>
+                    </lightning-input-field>
+                <lightning-input-field field-name="Phone__c" value={phonefield} onchange={updatephone}>
+                    </lightning-input-field>
+                <lightning-input-field field-name="PickUpLocation__c" value={pickupfield} onchange={updatepickup}>
+                    </lightning-input-field>
+                <lightning-input-field field-name="DropLocation__c" value={dropfield} onchange={updatedrop}>
+                    </lightning-input-field>
+                <lightning-input-field field-name="Ola_Booking_Name__c" value={olabooknamefield} onchange={updateolabookname}>
+                    </lightning-input-field>
+                <lightning-button type="submit"
+                    name="submit"
+                    label="Create Account"
+                    variant="brand" onclick={createfield}>
+                </lightning-button>
+                <p> {namefield}
+                    {phonefield}
+                    {olabooknamefield}</p>
+            </lightning-record-edit-form>
+            </fieldset>
+    </div>     
+    <!-- wireGetRecordDynamicContact.html -->
+    <lightning-card title="My Cab Booking Record" icon-name="standard:contact">
+        <template if:true={book.data}>
+            IN
+            <div class="slds-m-around_medium">
+                <p>{customernamefunc}</p>
+                <p>{pickuplocationfunc}</p>
+                <p>{droplocationfunc}</p>
+            </div>
+        </template>
+        <template if:true={book.error}>
+            <p>{book.error}></p>
+        </template>
+    </lightning-card>
+
+</template>
